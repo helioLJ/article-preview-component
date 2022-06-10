@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+    --font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: 5rem 1rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    height: 400px;
+    width: 1000px;
+}
+
+.banner {
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    border-radius: 15px 0 0 15px;
+    height: 100%;
+    width: 40%;
+}
+
+
+.content {
+    padding: 3.6rem;
+    width: 60%;
+}
+
+.content h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    margin-bottom: 1rem;
+}
+
+.content p {
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.author__person {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.author__person___avatar{
+    border-radius: 50%;
+    width: 15%;
+    margin-right: 1rem;
+}
+
+.author__person___info h2 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.author__person___info h3 {
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.share-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.share-icon:hover {
+    background-color: var(--Desaturated-Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+}
+
+.share-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor:initial;
+    height: 50px;
+    width: 300px;
+    top: -220%;
+    padding: 2rem;
+    position: absolute;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.share-box p {
+    font-size: .9rem;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+
+.share-box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.share-box div i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    height: 30px;
+    width: 20px;
+    margin-right: 1rem;
+    z-index: 99;
+    border-radius: 50%;
+}
+
+.share-box div i:hover {
+    color: var(--Desaturated-Dark-Blue);
+    transition: 0.3s;
+}   
+
+.arrow {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    height: 30px;
+    width: 30px;
+    top: 70%;
+    left: 45%;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.attribution {
+    display: none;
+    margin-top: 2rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.hide {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 600px;
+        width: 100%;
+    }
+
+    .banner {
+        border-radius: 15px 15px 0 0;
+        height: 60%;
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        height: 80%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content h1 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .content p :first-child {
+        padding-bottom: 1rem;
+    }
+
+    .share-box, .share-icon {
+        display: none;
+    }
+
+    .author {
+        width: 100%;
+    }
+    
+    .share-box-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: initial;
+        padding: 1.3rem 2rem;
+        transition: 0.3s;
+        user-select: none;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: -70px;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .shows-up {
+        opacity: 1;
+        transition: 0.3s;
+        transform: translateY(-70px);
+    }
+
+    .share-box-mobile p {
+        font-size: .9rem;
+        font-family: var(--font-family);
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        color: var(--Grayish-Blue);
+        font-weight: 500;
+        margin-right: 2rem;
+    }
+
+    .share-box-mobile div i {
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+        height: 30px;
+        width: 20px;
+        margin-right: 1rem;
+        z-index: 99;
+        border-radius: 50%;
+    }
+
+    .share-box-mobile div i:hover {
+        color: var(--Desaturated-Dark-Blue);
+        transition: 0.3s;
+    }
+
+    .share-icon-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .share-icon-mobile:hover {
+        color: var(--Light-Grayish-Blue);
+        background-color: var(--Desaturated-Dark-Blue);
+    }
+
+}
