@@ -13,6 +13,5 @@ share_button.addEventListener('click', (e) => {
 
 share_button_mobile.addEventListener('click', (e) => {
     e.preventDefault
-    console.log("oi");
     share_box_mobile.classList.toggle('shows-up')
 })
