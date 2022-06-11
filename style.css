@@ -47,7 +47,6 @@ main {
     width: 40%;
 }
 
-
 .content {
     padding: 3.6rem;
     width: 60%;
@@ -130,6 +129,7 @@ main {
     position: absolute;
     transition: 0.3s;
     user-select: none;
+    opacity: 0;
 }
 
 .share-box p {
@@ -176,36 +176,44 @@ main {
     position: absolute;
 }
 
-.attribution {
+.share-icon-mobile, .share-box-mobile {
     display: none;
+}
+
+.attribution {
+    color: var(--Desaturated-Dark-Blue);
     margin-top: 2rem;
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .hide {
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 735px) {
     body {
         padding: 2rem;
     }
 
     .container {
         flex-direction: column;
-        height: 600px;
+        height: 100%;
         width: 100%;
     }
 
     .banner {
         border-radius: 15px 15px 0 0;
-        height: 60%;
+
+        height: 200px;
+        max-height: 10%;
         width: 100%;
     }
 
